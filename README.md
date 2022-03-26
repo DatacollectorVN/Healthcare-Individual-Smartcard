@@ -6,7 +6,7 @@ We used JavaScript and [React Native](https://reactnative.dev) for developing th
 ## Setup requirements
 ### 1. Install [Nodejs](https://reactnative.dev)
 After installing, check
-`bash
+```bash
 node -v
 npm -v
-`
+```
