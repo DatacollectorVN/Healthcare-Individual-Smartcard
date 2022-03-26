@@ -50,7 +50,7 @@ If you get error like `zsh: command not found` to resolve this:
 
 
 ## 3. Getting start
-Follow [here](./getting-start/README.md) to getting start.
+Follow [here](https://github.com/DatacollectorVN/Medicine-mobile-app/blob/master/getting-start/GETTING_START.md) to getting start.
 
 ## 4. node_modules
 *node_modules* contains all packes dependency of your app project. You can create this again by `yarn install`.
