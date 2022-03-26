@@ -5,8 +5,13 @@ We used JavaScript and [React Native](https://reactnative.dev) for developing th
 
 ## Setup requirements
 ### 1. Install [Nodejs](https://reactnative.dev)
-After installing, check
-```bash
+After installing, verify:
+
+`bash
 node -v
+`
+
+`bash
 npm -v
-```
+`
+
