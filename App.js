@@ -1,28 +1,59 @@
-// In App.js in a new project
-
-import * as React from 'react';
-import { View, Text } from 'react-native';
+import React from 'react';
 import { NavigationContainer } from '@react-navigation/native';
-import { createNativeStackNavigator } from '@react-navigation/native-stack';
+import { createStackNavigator } from '@react-navigation/stack';
+import {
+  StyleSheet,
+  View,
+  Text,
+  Pressable,
+} from 'react-native';
+import { createMaterialBottomTabNavigator } from '@react-navigation/material-bottom-tabs';
+import Login from './src/Login';
+import HomeScreen from './src/HomeScreen'
+import QRScanner from './src/QRScanner';
+const Stack = createStackNavigator();
+const Tab = createMaterialBottomTabNavigator();
 
-function HomeScreen() {
-  return (
-    <View style={{ flex: 1, alignItems: 'center', justifyContent: 'center' }}>
-      <Text>Home Screen</Text>
-    </View>
-  );
-}
-
-const Stack = createNativeStackNavigator();
-
-function App() {
-  return (
-    <NavigationContainer>
-      <Stack.Navigator>
-        <Stack.Screen name="Home" component={HomeScreen} />
-      </Stack.Navigator>
-    </NavigationContainer>
-  );
+function App(){
+    return (
+      <NavigationContainer> 
+        <Stack.Navigator
+          // screenOptions={
+          //   {
+          //     header: () => null
+          //   }
+          // }
+        >
+          <Stack.Screen
+            name="Login"
+            component={Login}
+          />
+          <Stack.Screen
+            name="HomeScreen"
+            component={HomeScreen}
+          />
+          <Stack.Screen
+            name="QRScanner"
+            component={QRScanner}
+          />
+          
+        </Stack.Navigator>
+        {/* <Tab.Navigator>
+            <Tab.Screen
+              name="HomeScreen"
+              component={HomeScreen}
+              options={{ tabBarIcon: () => <Text>😝</Text>}}
+            />
+            <Tab.Screen
+              name="QrScanner"
+              component={QRScanner}
+              options={{ tabBarIcon: () => <Text>😎</Text>}}
+            />
+        </Tab.Navigator> */}
+      
+        
+      </NavigationContainer>
+    )
 }
 
 export default App;
