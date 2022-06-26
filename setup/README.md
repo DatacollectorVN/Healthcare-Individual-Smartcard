@@ -3,7 +3,7 @@ This is our Capstone Project in **Biomedical Engineering** Deparmant in **Intern
 
 ## 1. Install prerequirements
 - If you still not install `Nodejs`, `React Native` and `Expo` before. Please read our instruction [here](https://github.com/DatacollectorVN/React-Native-Tutorial).
-- Have an acoount Googl Cloud Platform (GCP).
+- Have an account Google Cloud Platform (GCP).
 
 ## 2. Setting up
 - Clone this repository
