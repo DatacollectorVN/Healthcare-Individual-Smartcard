@@ -5,73 +5,39 @@ import {
   View,
   Text,
   Image,
-  TouchableOpacity,
-  TextInput,
+  TouchableOpacity
 } from "react-native";
-import { NavigationContainer } from '@react-navigation/native';
-import { createMaterialBottomTabNavigator } from '@react-navigation/material-bottom-tabs';
 import { StatusBar } from "expo-status-bar";
 import BannerImage from "../assets/BME.jpg";
-import QRScanner from './QRScanner';
-
-
-
-export default function Login({navigation}) {
-  const [name, SetName] = useState('');
-  const onPressHandler = () => {
-    navigation.navigate('HomeScreen', [name]);
-  }
+export default function HomeScreen({navigation, route}) {
+  const user = route.params.user
   return (
     <>
-      
       <StatusBar style="light" />
-
-      {/* https://reactnative.dev/docs/image */}
       <Image source={BannerImage} style={styles.banner} />
-
       <SafeAreaView style={styles.container}>
         <View style={styles.content}>
-          <TextInput
-            style={[styles.input, styles.inputUsername]}
-            placeholder="You account name"
-            placeholderTextColor="#cdcdcf"
-            onChangeText={(value) => SetName(value)}
-          />
-
-          <TextInput
-            style={[styles.input, styles.inputPassword]}
-            secureTextEntry={true}
-            placeholder="Your password"
-            placeholderTextColor="#cdcdcf"
-          />
-
           <TouchableOpacity style={styles.button}
-            onPress={onPressHandler}
+          onPress={() => navigation.navigate('ProfileUser', {user:user})}
           >
-            <Text style={styles.buttonText}>Sigin in</Text>
+            <Text style={styles.buttonText}>User Profile</Text>
           </TouchableOpacity>
-
-          <TouchableOpacity style={styles.link}>
-          
-            <Text style={styles.linkText}>Forget passwork</Text>
-          </TouchableOpacity>
-
-          <TouchableOpacity style={styles.link}>
-            <Text style={styles.linkText}>Return</Text>
-          </TouchableOpacity>
-        </View>
-
-        <View style={styles.footer}>
-          <View style={styles.divider}>
-            <View style={styles.dividerLine} />
-            <Text style={styles.dividerText}>OR</Text>
-            <View style={styles.dividerLine} />
+          {/* <View style = {{alignItems: 'center'}}>
+            <View style={styles.divider}>
+              <View style={styles.dividerLine} />
+              <Text style={styles.dividerText}>Finding Hospitals</Text>
+              <View style={styles.dividerLine} />
+            </View>
+          </View> */}
+          <View style = {{alignItems: 'center'}}>
+            <View style={styles.divider}>
+              <View style={styles.dividerLine} />
+            </View>
           </View>
-
-          <TouchableOpacity style={[styles.button, styles.buttonRegister]}>
-            <Text style={[styles.buttonText, styles.buttonRegisterText]}>
-              Create new account
-            </Text>
+          <TouchableOpacity style={styles.button}
+            onPress={() => navigation.navigate('SearchNearBy')}
+          >
+            <Text style={styles.buttonText}>Finding</Text>
           </TouchableOpacity>
         </View>
       </SafeAreaView>
@@ -91,7 +57,8 @@ const styles = StyleSheet.create({
     justifyContent: "space-between",
   },
   content: {
-    padding: 22,
+    alignItems: "center",
+    padding: 5,
   },
   input: {
     borderWidth: 1,
@@ -112,13 +79,14 @@ const styles = StyleSheet.create({
   },
   button: {
     height: 42,
+    width:'80%',
     borderRadius: 6,
     backgroundColor: "#1977f3",
     justifyContent: "center",
     marginVertical: 15,
   },
   buttonText: {
-    color: "#b4cafb",
+    color: "#f8f8ff",
     textAlign: "center",
     fontSize: 16,
   },
