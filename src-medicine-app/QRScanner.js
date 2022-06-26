@@ -13,13 +13,13 @@ export default function QRScanner({ navigation, route }) {
   const [text, setText] = useState('Please scanning the QR Code on smart card!') // text get qr code result
   const existUsers = [
     'Jisoo',
-    'User2',
-    'User3'
+    '<User2>',
+    '<User3>'
   ]
   const existURL = [
     'https://me-qr.com/RDw90x',
-    'codeUser2',
-    'codeUser3'
+    '<codeUser2>',
+    '<codeUser3>'
   ]
 
   const askForCameraPermission = () => {

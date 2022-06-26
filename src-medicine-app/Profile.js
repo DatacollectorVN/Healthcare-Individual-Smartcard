@@ -8,24 +8,24 @@ export default function ProfileUser({navigation, route}) {
     const user = route.params.user
     const existUsers = [
         'Jisoo',
-        'User2',
-        'User3'
+        '<User2>',
+        '<User3>'
     ]
     let jisooImage, hoangImage, binhImage
     const existavts = [
         jisooImage = require('../assets/jisoo/avt.jpeg'),
-        hoangImage = require('../assets/User2/avt.jpg'),
-        binhImage =  require('../assets/User3/avt.jpg')
+        hoangImage = require('../assets/<User2_avt>'),
+        binhImage =  require('../assets/<User3_avt>')
     ]
     const existPhones = [
         '09123456jqk',
-        'phoneUser2',
-        'phoneUser3'
+        '<phoneUser2>',
+        '<phoneUser3>'
     ]
     const existMails = [
         'jisoo@blackpink.blink',
-        'mailUser2',
-        'mailUser3'
+        '<mailUser2>',
+        '<mailUser3>'
     ]
     let idx
     idx = existUsers.indexOf(user)
