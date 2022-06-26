@@ -11,3 +11,4 @@ The goal of this project is to design a mobile application that scans individual
 In this repository, we developed the *front-end* of application based on **React Native** and deploy it by **Expo**
 
 ## 2. Front-end architecture
+![plot](https://github.com/DatacollectorVN/Healthcare-Individual-Smartcard/blob/master/public-imgs/front_end_architecture.png?raw=true)
